@@ -1,0 +1,7 @@
+.image-bar {
+    height: 400px;
+    background: url('//live.staticflickr.com/65535/50223991908_6d02aa205f_c.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: .5;
+}

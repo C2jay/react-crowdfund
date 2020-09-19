@@ -1,0 +1,25 @@
+#nav-text {
+    padding: 5px;
+    justify-content: flex-end;
+    font-size: 2em;
+    font-family: 'Raleway', sans-serif;
+    ;
+}
+
+.nav-container {
+    display: flex;
+    height: 50px;
+    justify-content: flex-end;
+    background-color:#4da6ff;    
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    padding: 30px;
+}
+
+a:hover{
+    color: #ff9999;
+    text-decoration: solid;
+}
