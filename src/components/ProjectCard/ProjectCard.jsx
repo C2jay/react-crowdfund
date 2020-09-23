@@ -9,10 +9,18 @@ function ProjectCard(props) {
 
     return (
         <div className="project-card">
-            <Link to="/project">
-                <h3>{projectData.title}</h3>
-                <img src={projectData.project_image} />
-                
+            <Link to={`/project/${projectData.id}`}>               
+                <div id="card-text">
+                    <h4>{projectData.title}</h4>
+                    <p> {projectData.owner}</p>
+                </div>
+                    <img src={projectData.project_image} />
+                <div id="card-category">
+                    <p>{projectData.category}</p>
+                </div>
+                <div id="card-date">
+                    <p>{projectData.date_created}</p>
+                </div>
             </Link>
         </div>
     );

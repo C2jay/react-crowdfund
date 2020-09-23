@@ -1,6 +1,22 @@
+html {
+  font-family: 'Raleway', sans-serif;
+}
+
 #project-list {
   display: grid;
+  justify-content: center;
+  margin-top: 10px;
   grid-template-columns: 30% 30% 30%;
+  grid-column-gap: 10px;
   column-gap: 10px;
+  grid-row-gap: 10px;
   row-gap: 10px;
+  }
+
+a {
+    text-decoration: none;
+}
+
+a:hover{
+    color: #ff9999;
 }

@@ -9,7 +9,6 @@ function Nav() {
         <nav className='nav-container'>
             <nav id='nav-text'>
                 <Link to="/">Home</Link>
-                <Link to="/project">Project</Link>
             </nav>
             <nav className="image-bar"></nav>
         </nav>

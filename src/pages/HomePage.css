@@ -4,4 +4,6 @@
     background-size: cover;
     background-attachment: fixed;
     opacity: .5;
+    border-bottom: 2px solid #ff9999;
+
 }

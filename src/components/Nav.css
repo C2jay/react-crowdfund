@@ -1,7 +1,9 @@
 #nav-text {
+    display: flex;
+    align-items: center;
     padding: 5px;
     justify-content: flex-end;
-    font-size: 2em;
+    font-size: 1em;
     font-family: 'Raleway', sans-serif;
     ;
 }
@@ -10,16 +12,6 @@
     display: flex;
     height: 50px;
     justify-content: flex-end;
-    background-color:#4da6ff;    
-}
-
-a {
-    color: white;
-    text-decoration: none;
-    padding: 30px;
-}
-
-a:hover{
-    color: #ff9999;
-    text-decoration: solid;
+    background-color: #e6f2ff;
+    border-bottom: 2px solid #ff9999;
 }

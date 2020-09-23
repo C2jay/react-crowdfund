@@ -1,10 +1,37 @@
 .project-card {
-    width: 100%;
-    border: 1px solid black;
-    box-shadow: 0px 0px 5px gray;
+  display: flex;
+  width: 100%;
+  background-color: #e6f2ff;
+  border: 2px solid #ff9999;
+  border-radius: 1em;
   }
-  .project-card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-  }
+
+.project-card img {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+#card-text {
+  display:flex;
+  flex-direction: column;
+  margin: 0px;
+  color: black;
+  margin-left: 5px;
+}
+
+#card-text a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0px;
+  padding-bottom: 5px;
+}
+
+h4 {
+  margin: 3px;
+}

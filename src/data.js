@@ -21,6 +21,50 @@ export const allProjects = [
         "date_created": "2020-09-11T11:32:12",
         "owner": "admin"
     },
+    {
+        "id": 3,
+        "title": "Project three",
+        "category": "CP",
+        "description": "The third project.",
+        "goal": 200,
+        "project_image": "https://via.placeholder.com/300.jpg",
+        "is_open": true,
+        "date_created": "2020-09-23T11:42:27",
+        "owner": "admin"
+    },
+    {
+        "id": 4,
+        "title": "Project four",
+        "category": "CK",
+        "description": "The fourth project.",
+        "goal": 500,
+        "project_image": "https://via.placeholder.com/300.jpg",
+        "is_open": true,
+        "date_created": "2020-09-23T11:42:58",
+        "owner": "admin"
+    },
+    {
+        "id": 5,
+        "title": "Project five",
+        "category": "CK",
+        "description": "The fifth project.",
+        "goal": 150,
+        "project_image": "https://via.placeholder.com/300.jpg",
+        "is_open": true,
+        "date_created": "2020-09-23T11:43:23",
+        "owner": "admin"
+    },
+    {
+        "id": 6,
+        "title": "Project six",
+        "category": "CK",
+        "description": "The sixth project.",
+        "goal": 150,
+        "project_image": "https://via.placeholder.com/300.jpg",
+        "is_open": true,
+        "date_created": "2020-09-23T11:46:00",
+        "owner": "admin"
+    }
 ];
 
 
