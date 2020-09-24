@@ -27,11 +27,11 @@ function ProjectCard(props) {
                 <div id="card-date">
                     <p>{projectData.date_created}</p>
                 </div>
-                <div>
+                {/* <div>
                     {testData.map((item, idx) => (
                     <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} />
                     ))}
-                </div>
+                </div> */}
             </Link>
         </div>
     );

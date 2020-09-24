@@ -4,6 +4,7 @@ import ProjectPage from './pages/ProjectPage';
 import HomePage from "./pages/HomePage";
 import Register from "./pages/Register";
 import Nav from "./components/Nav";
+import Foot from "./components/Foot";
 import './App.css';
 
 
@@ -24,6 +25,8 @@ function App(){
                         <Register />
                     </Route>
                 </Switch>
+
+                <Foot />
             </div>
         </Router>
     );

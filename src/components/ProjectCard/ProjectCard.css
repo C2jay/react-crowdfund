@@ -1,14 +1,16 @@
 .project-card {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   width: 100%;
   background-color: #e6f2ff;
   border: 2px solid #ff9999;
-  border-radius: 1em;
+  box-shadow: 1px 1px 5px #ff9999;
   }
 
 .project-card img {
+  align-self: center;
   display: flex;
-  text-align: center;
   width: 100%;
   height: 200px;
   object-fit: cover;

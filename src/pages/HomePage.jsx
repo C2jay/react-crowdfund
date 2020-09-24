@@ -55,6 +55,10 @@ function HomePage() {
                         return <ProjectCard key={key} projectData={projectData} />;
                     })}
                 </div>
+
+                <div className="header-bar">
+                    headerbar
+                </div>
         </div>
     );
 }
