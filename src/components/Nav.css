@@ -9,25 +9,19 @@
 .nav-container {
     display: flex;
     justify-content: space-between;
-    height: 100px;
+    height: 75px;
     background-color: #e6f2ff;
     border-bottom: 2px solid #ff9999;
 }
 
-/* #logo-image {
-    border: 1px solid black;
-    display: flex;
-    align-items: center;
-} */
-
 img {
-    height:100px;
+    height:75px;
     width: auto;
 }
 
 .logo-search-bar {
     display: flex;
-    align-items: center;
+    align-items:center;
 }
 
 a {

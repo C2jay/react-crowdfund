@@ -1,19 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&family=Raleway:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+
+.header-bar {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin: 5px;
+}
+
 .sliderimg{
     width: 100%;
-    height: 500px;
-    object-fit: cover
-  }
+    height: 400px;
+    object-fit: cover;
+    opacity: .7;
+ }
 
 
 .slogan {
-    border: 1px solid black;
     display: flex;
-    justify-content: center;
-    
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+}
+
+.slogan img {
+    height: 25%;
+}
+
+.slogan p {
+    font-style: italic;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
 }
 
 h3 {
-    border: 1px solid black;
-
     font-family: 'Quicksand', sans-serif;
+    font-size: 2.3em;
+    text-align: center;
 }
