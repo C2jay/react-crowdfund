@@ -1,10 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "./ProjectCard.css";
+import ProgressBar from '../ProgressBar/ProgressBar';
+
 
 function ProjectCard(props) {
     const { projectData } = props;
-
+    const testData = [
+        { bgcolor: "#6a1b9a", completed: 60 },
+        { bgcolor: "#00695c", completed: 30 },
+        { bgcolor: "#ef6c00", completed: 53 },
+      ];
 
 
     return (
@@ -21,7 +27,7 @@ function ProjectCard(props) {
                 <div id="card-date">
                     <p>{projectData.date_created}</p>
                 </div>
-                <div className="App">
+                <div>
                     {testData.map((item, idx) => (
                     <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} />
                     ))}

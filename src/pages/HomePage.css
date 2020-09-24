@@ -38,3 +38,8 @@ h3 {
     font-size: 2.3em;
     text-align: center;
 }
+
+#emphasis {
+    color:#99ccff;
+    font-weight: bold;
+}

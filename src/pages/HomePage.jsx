@@ -24,7 +24,8 @@ function HomePage() {
             setProjectList(data);
         });
         // setProjectList(allProjects);
-    }, []);
+    }, [])
+
 
 
     return (
@@ -44,7 +45,7 @@ function HomePage() {
                 <div className='slogan'>
                     <h3>Life is sweet with Sugar Momma!</h3>
                     <img src={Logo} />
-                    <p>post your project images to instagram with the tag #thnxsugarmomma for a chance to get your image featured here!</p>
+                    <p>Post photos of your completed projects to <span id="emphasis">instagram</span> with the tag <span id="emphasis"> &#35;thnxsugarmomma </span> for a chance to get your image featured here!</p>
                 </div>
 
             </div>
