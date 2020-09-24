@@ -1,9 +1,19 @@
-.image-bar {
-    height: 400px;
-    background: url('//live.staticflickr.com/65535/50223991908_6d02aa205f_c.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    opacity: .5;
-    border-bottom: 2px solid #ff9999;
+.sliderimg{
+    width: 100%;
+    height: 500px;
+    object-fit: cover
+  }
 
+
+.slogan {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    
+}
+
+h3 {
+    border: 1px solid black;
+
+    font-family: 'Quicksand', sans-serif;
 }

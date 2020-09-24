@@ -2,16 +2,34 @@
     display: flex;
     align-items: center;
     padding: 5px;
-    justify-content: flex-end;
     font-size: 1em;
     font-family: 'Raleway', sans-serif;
-    ;
 }
 
 .nav-container {
     display: flex;
-    height: 50px;
-    justify-content: flex-end;
+    justify-content: space-between;
+    height: 100px;
     background-color: #e6f2ff;
     border-bottom: 2px solid #ff9999;
+}
+
+/* #logo-image {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+} */
+
+img {
+    height:100px;
+    width: auto;
+}
+
+.logo-search-bar {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    padding: 5px;
 }

@@ -5,13 +5,11 @@ html {
 #project-list {
   display: grid;
   justify-content: center;
-  margin-top: 10px;
-  grid-template-columns: 30% 30% 30%;
-  grid-column-gap: 10px;
-  column-gap: 10px;
-  grid-row-gap: 10px;
-  row-gap: 10px;
-  }
+  margin-top: 20px;
+  grid-template-columns: 45% 45%;
+  column-gap: 20px;
+  grid-row-gap: 20px;
+}
 
 a {
     text-decoration: none;
