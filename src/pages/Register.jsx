@@ -1,11 +1,12 @@
 import React from 'react';
 import "./Register.css";
+import RegisterForm from '../components/RegisterForm/RegisterForm'
 
 
 
 
 function Register() {
-    return <h1>This is the registration Page</h1>
+    return <RegisterForm />
 }
 
 

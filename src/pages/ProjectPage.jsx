@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import ProgressBar from '../components/ProgressBar/ProgressBar';
+import "./ProjectPage.css";
+
+
+
 function ProjectPage() {
     const [projectData, setProjectData] = useState({ pledges: [] });
     const { id } = useParams();
+    const date = new Date(projectData.date_created);
+    const readableDate = date.toString();
     useEffect(() => {
         fetch(`${process.env.REACT_APP_API_URL}projects/${id}`)
         .then((results) => {
@@ -13,12 +19,14 @@ function ProjectPage() {
             setProjectData(data);
             });
     }, []);
+
+    
     let pledged = 0
     projectData.pledges.map((pledge) => pledged += pledge.amount)
     return (
         <div>
             <h2>{projectData.title}</h2>
-            <h3>Created at: {projectData.date_created}</h3>
+            <h3>created at: {date.toLocaleDateString()}</h3>
             <h3>{`Status: ${projectData.is_open}`}</h3>
             <h3>{`Total pledged: ${pledged}`}</h3>
             <ProgressBar bgcolor="#6a1b9a" completed={Math.min((pledged/projectData.goal)*100, 100)} />

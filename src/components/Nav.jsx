@@ -7,6 +7,8 @@ import Logo from './logo/sugarmomma.png';
 
 
 function Nav() {
+
+
     return (
         <div className='nav-container'>
             <div className='logo-search-bar'>
@@ -21,7 +23,7 @@ function Nav() {
                 </div>
             </div>
             <nav id='nav-text'>
-                <Link to="/">Login</Link>
+                <Link to="/login">Login</Link>
                 <Link to="/register">Join the kitchen</Link>
             </nav>
         </div>

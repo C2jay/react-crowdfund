@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "./Foot.css";
+import "../index.css";
 import Logo from './logo/sugarmomma.png';
+import Facebook from './images/facebook.png';
+import Twitter from './images/twitter.png';
+import Instagram from './images/instagram.png';
 
 
 
@@ -21,12 +24,15 @@ function Foot() {
             </nav>
             
             <div className='social-icons'>
-                <img src=""></img>
-                <img src=""></img>
-                <img src=""></img>
+                <img src={Twitter}></img>
+                <img src={Facebook}></img>
+                <img src={Instagram}></img>
             </div>
         </div>
     );
 }
 
 export default Foot;
+
+
+// Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
