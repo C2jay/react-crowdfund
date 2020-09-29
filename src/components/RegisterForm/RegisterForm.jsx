@@ -6,6 +6,7 @@ function RegisterForm() {
     const [credentials, setCredentials] = useState ({
         username: "",
         password: "",
+        email: "",
     });
 
     const history = useHistory();
@@ -21,7 +22,7 @@ function RegisterForm() {
 
     const postData = async () => {
         const response = await fetch(
-            `${process.env.REACT_APP_API_URL}api-token-auth/`, 
+            `${process.env.REACT_APP_API_URL}users/register/`, 
             {
                 method: "post",
                 headers: {
@@ -61,6 +62,15 @@ function RegisterForm() {
                 type="password" 
                 id="password" 
                 placeholder="Enter Password" 
+                onChange={handleChange}
+                />
+            </div>
+            <div>
+                <label htmlFor="email">Password: </label>
+                <input 
+                type="text" 
+                id="email" 
+                placeholder="Enter email" 
                 onChange={handleChange}
                 />
             </div>

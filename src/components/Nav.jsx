@@ -5,10 +5,13 @@ import Logo from './logo/sugarmomma.png';
 
 
 
-
 function Nav() {
-
-
+    const token = window.localStorage.getItem("token")
+    if (token !== null){
+        return (
+            <p>{typeof token} {token}</p>
+            )
+    }
     return (
         <div className='nav-container'>
             <div className='logo-search-bar'>

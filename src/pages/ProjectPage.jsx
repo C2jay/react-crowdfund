@@ -25,26 +25,33 @@ function ProjectPage() {
     projectData.pledges.map((pledge) => pledged += pledge.amount)
     return (
         <div>
-            <h2>{projectData.title}</h2>
-            <h3>created at: {date.toLocaleDateString()}</h3>
-            <h3>{`Status: ${projectData.is_open}`}</h3>
-            <h3>{`Total pledged: ${pledged}`}</h3>
-            <ProgressBar bgcolor="#6a1b9a" completed={Math.min((pledged/projectData.goal)*100, 100)} />
-            <h3>Pledges:</h3>
-            <ul>
-                {projectData.pledges.map((pledgeData, key) => {
-                    return (
-                        <div>
-                            <br></br>
-                            <li>
-                                {pledgeData.amount} from {pledgeData.supporter}
-                            </li>
-                            <p>{pledgeData.comment}</p>
-                            <p>{pledgeData.pledges}</p>
-                        </div>
-                    );
-                })}
-            </ul>
+            <div className='project-heading'>
+                <h2>{projectData.title}</h2>
+                <h3>created at: {date.toLocaleDateString()}</h3>
+                <h3>{`Status: ${projectData.is_open}`}</h3>
+                <h3>{`Total pledged: ${pledged}`}</h3>
+            </div>
+            <div className='progress-bar'>
+                <ProgressBar bgcolor="#6a1b9a" completed={Math.min((pledged/projectData.goal)*100, 100)} />
+            </div>
+            
+            <div className='pledges-container'>
+                <h3>Pledges:</h3>
+                <ul>
+                    {projectData.pledges.map((pledgeData, key) => {
+                        return (
+                            <div>
+                                <br></br>
+                                <li>
+                                    {pledgeData.amount} from {pledgeData.supporter}
+                                </li>
+                                <p>{pledgeData.comment}</p>
+                                <p>{pledgeData.pledges}</p>
+                            </div>
+                        );
+                    })}
+                </ul>
+            </div>
         </div>
     );
 }
