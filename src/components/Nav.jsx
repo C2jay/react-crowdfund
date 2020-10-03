@@ -39,7 +39,7 @@ function Nav() {
             </div>
             <nav id='nav-text'>
                 {loggedIn? (
-                    <Link> { username }</Link>
+                    <Link to="/user-profile"> { username }</Link>
                 ):""}
                 {!loggedIn? (
                     <Link to="/login">Login</Link>

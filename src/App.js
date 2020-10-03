@@ -4,8 +4,9 @@ import ProjectPage from './pages/ProjectPage';
 import HomePage from "./pages/HomePage";
 import Register from "./pages/Register";
 import Nav from "./components/Nav";
-import Foot from "./components/Foot"
-import LoginPage from "./pages/LoginPage"
+import Foot from "./components/Foot";
+import LoginPage from "./pages/LoginPage";
+import UserProfilePage from "./pages/UserProfilePage";
 import './App.css';
 import NewProjectPage from './pages/NewProject';
 
@@ -31,6 +32,9 @@ function App(){
                     </Route>
                     <Route path="/new-project">
                         <NewProjectPage />
+                    </Route>
+                    <Route path="/user-profile">
+                        <UserProfilePage />
                     </Route>
                 </Switch>
 
