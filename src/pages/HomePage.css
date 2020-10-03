@@ -43,3 +43,23 @@ h3 {
     color:#99ccff;
     font-weight: bold;
 }
+
+.filters {
+    display: flex;
+    height: 2em;
+    width: max-content;
+}
+
+button {
+    background-color: white;
+    color: cornflowerblue;
+    font-size: 1em;
+    border: none;
+}
+
+#remove-filters{
+    border-bottom: 2px dotted coral;
+    color: coral;
+    font-weight: bold; 
+}
+

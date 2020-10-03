@@ -56,14 +56,14 @@ function HomePage() {
                     <p>Post photos of your completed projects to <span id="emphasis">instagram</span> with the tag <span id="emphasis"> &#35;thnxsugarmomma </span> for a chance to get your image featured here!</p>
                 </div>
             </div>
-            <div>
+            <div className="filters">
                 <button type='button' name="Cupcakes" onClick={changeFilter}>Cupcakes</button>
                 <button type='button' name="Cake" onClick={changeFilter}>Cake</button>
                 <button type='button' name="Pies" onClick={changeFilter}>Pies</button>
                 <button type='button' name="Pastry" onClick={changeFilter}>Pastry</button>
                 <button type='button' name="Cookies" onClick={changeFilter}>Cookies</button>
                 <button type='button' name="Other" onClick={changeFilter}>Other</button>
-                <button type='button' name="All" onClick={changeFilter}>Remove Filters</button>
+                <button id="remove-filters" type='button' name="All" onClick={changeFilter}>Remove Filters</button>
             </div>
             <div id="project-list">
                 {projectList.reduce((total, projectData, key) => {
