@@ -2,7 +2,7 @@ import React from 'react';
 import UserProfile from '../components/UserProfile/UserProfile';
 
 
-function UserProfile() {
+function UserProfilePage() {
     return (
         <UserProfile />
     );
