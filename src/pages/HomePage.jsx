@@ -14,6 +14,7 @@ import Logo from '../components/logo/sugarmomma.png';
 
 function HomePage() {
     const [projectList, setProjectList] = useState([]);
+    const [filter, setFilter] = useState();
 
     useEffect(() => {
         fetch(`${process.env.REACT_APP_API_URL}projects/`)
@@ -26,6 +27,13 @@ function HomePage() {
         // setProjectList(allProjects);
     }, [])
 
+    const changeFilter = (event) => {
+        if (event.target.name === "All") {
+            setFilter();
+        } else {
+            setFilter(event.target.name);
+        }
+    };
 
 
     return (
@@ -47,18 +55,21 @@ function HomePage() {
                     <img src={Logo} alt="sugarmomma-logo" />
                     <p>Post photos of your completed projects to <span id="emphasis">instagram</span> with the tag <span id="emphasis"> &#35;thnxsugarmomma </span> for a chance to get your image featured here!</p>
                 </div>
-
             </div>
-                
-                <div id="project-list">
-                    {projectList.map((projectData, key) => {
-                        return <ProjectCard key={key} projectData={projectData} />;
-                    })}
-                </div>
-
-                <div className="header-bar">
-                    headerbar
-                </div>
+            <div>
+                <button type='button' name="Cupcakes" onClick={changeFilter}>Cupcakes</button>
+                <button type='button' name="Cake" onClick={changeFilter}>Cake</button>
+                <button type='button' name="Pies" onClick={changeFilter}>Pies</button>
+                <button type='button' name="Pastry" onClick={changeFilter}>Pastry</button>
+                <button type='button' name="All" onClick={changeFilter}>Remove Filters</button>
+            </div>
+            <div id="project-list">
+                {projectList.reduce((total, projectData, key) => {
+                if (filter != null && projectData.category !== filter) return total;
+                total.push(<ProjectCard key={key} projectData={projectData} />);
+                return total;
+                }, [])}
+            </div>
         </div>
     );
 }

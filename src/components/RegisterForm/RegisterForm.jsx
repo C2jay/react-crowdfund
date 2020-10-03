@@ -22,7 +22,7 @@ function RegisterForm() {
 
     const postData = async () => {
         const response = await fetch(
-            `${process.env.REACT_APP_API_URL}users/register/`, 
+            `${process.env.REACT_APP_API_URL}register/`, 
             {
                 method: "post",
                 headers: {
@@ -36,13 +36,12 @@ function RegisterForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (credentials.username && credentials.password) {
-            postData().then((response) => {
-                alert('boo')
-                window.localStorage.setItem("token", response.token);
-                history.push("/");
-            });
-        }
+        postData().then((response) => {
+            alert('boo')
+            window.localStorage.setItem('username', credentials.username)
+            window.localStorage.setItem("token", response.token);
+            history.push("/");
+        });
     };
 
     // template
@@ -67,7 +66,7 @@ function RegisterForm() {
                 />
             </div>
             <div>
-                <label htmlFor="email">Password: </label>
+                <label htmlFor="email">email: </label>
                 <input 
                 type="text" 
                 id="email" 
@@ -75,7 +74,7 @@ function RegisterForm() {
                 onChange={handleChange}
                 />
             </div>
-            <button type="submit" onClick={handleSubmit}>Login</button>
+            <button type="submit" onClick={handleSubmit}>Register</button>
         </form>
     );
 }

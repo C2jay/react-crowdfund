@@ -35,7 +35,6 @@ function Nav() {
                 </div>
                 <div className='search-bar'>
                     <p>searchbar placeholder</p>
-                    <p>category search</p>
                 </div>
             </div>
             <nav id='nav-text'>
