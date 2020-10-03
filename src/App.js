@@ -7,6 +7,7 @@ import Nav from "./components/Nav";
 import Foot from "./components/Foot"
 import LoginPage from "./pages/LoginPage"
 import './App.css';
+import NewProjectPage from './pages/NewProject';
 
 
 function App(){
@@ -27,6 +28,9 @@ function App(){
                     </Route>
                     <Route path="/register">
                         <Register />
+                    </Route>
+                    <Route path="/new-project">
+                        <NewProjectPage />
                     </Route>
                 </Switch>
 

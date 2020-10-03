@@ -55,4 +55,4 @@ function ProjectPage() {
         </div>
     );
 }
-export default ProjectPage
+export default ProjectPage;

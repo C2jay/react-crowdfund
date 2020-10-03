@@ -1,17 +1,30 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, {  useState, useEffect} from 'react';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import "./Nav.css";
 import Logo from './logo/sugarmomma.png';
 
 
 
 function Nav() {
-    const token = window.localStorage.getItem("token")
-    if (token !== null){
-        return (
-            <p>{typeof token} {token}</p>
-            )
+
+    const [loggedIn, setLoggedIn] = useState(false);
+    const history = useHistory();
+    const location = useLocation();
+
+
+    useEffect(() => {
+        const token = window.localStorage.getItem("token");
+        token != null ? setLoggedIn(true) : setLoggedIn(false);
+    }, [location]);
+
+    const logOut = () => {
+        window.localStorage.clear();
+        history.push("/");
     }
+
+    const username = window.localStorage.getItem("username")
+
+
     return (
         <div className='nav-container'>
             <div className='logo-search-bar'>
@@ -26,7 +39,14 @@ function Nav() {
                 </div>
             </div>
             <nav id='nav-text'>
-                <Link to="/login">Login</Link>
+                {loggedIn? (
+                    <Link> { username }</Link>
+                ):""}
+                {!loggedIn? (
+                    <Link to="/login">Login</Link>
+                ) : (
+                <Link onClick={logOut}>Logout</Link>
+                )}
                 <Link to="/register">Join the kitchen</Link>
             </nav>
         </div>

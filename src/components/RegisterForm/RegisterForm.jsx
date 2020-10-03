@@ -38,6 +38,7 @@ function RegisterForm() {
         e.preventDefault();
         if (credentials.username && credentials.password) {
             postData().then((response) => {
+                alert('boo')
                 window.localStorage.setItem("token", response.token);
                 history.push("/");
             });
