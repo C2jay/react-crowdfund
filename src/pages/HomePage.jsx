@@ -61,6 +61,8 @@ function HomePage() {
                 <button type='button' name="Cake" onClick={changeFilter}>Cake</button>
                 <button type='button' name="Pies" onClick={changeFilter}>Pies</button>
                 <button type='button' name="Pastry" onClick={changeFilter}>Pastry</button>
+                <button type='button' name="Cookies" onClick={changeFilter}>Cookies</button>
+                <button type='button' name="Other" onClick={changeFilter}>Other</button>
                 <button type='button' name="All" onClick={changeFilter}>Remove Filters</button>
             </div>
             <div id="project-list">

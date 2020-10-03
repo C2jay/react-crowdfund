@@ -72,6 +72,10 @@ function NewProjectForm() {
                     <option value="Cupcakes">Cupcakes</option>
                     <option value="Cake">Cake</option>
                     <option value="Pastry">Pastry</option>
+                    <option value="Pies">Pies</option>
+                    <option value="Cookies">Cookies</option>
+                    <option value="Other">Other</option>
+
                 </select>
             </div>
             <div>
