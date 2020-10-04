@@ -47,7 +47,7 @@ function RegisterForm() {
     // template
     return (
         <form>
-            <div>
+            <div className='form-container'>
                 <label htmlFor="username">Username: </label>
                 <input 
                 type="text" 
@@ -56,7 +56,7 @@ function RegisterForm() {
                 onChange={handleChange}
                 />
             </div>
-            <div>
+            <div className='form-container'>
                 <label htmlFor="password">Password: </label>
                 <input 
                 type="password" 
@@ -65,7 +65,7 @@ function RegisterForm() {
                 onChange={handleChange}
                 />
             </div>
-            <div>
+            <div className='form-container'>
                 <label htmlFor="email">email: </label>
                 <input 
                 type="text" 
@@ -74,7 +74,7 @@ function RegisterForm() {
                 onChange={handleChange}
                 />
             </div>
-            <button type="submit" onClick={handleSubmit}>Register</button>
+            <button id="submit" type="submit" onClick={handleSubmit}>Register</button>
         </form>
     );
 }

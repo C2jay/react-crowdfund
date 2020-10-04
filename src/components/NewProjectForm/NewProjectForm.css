@@ -1,0 +1,46 @@
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3vh;
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+
+.form-container{
+    display: flex;
+    align-items: center;
+}
+
+label {
+    background-color: coral;
+    margin: 3vh;
+    padding: 1.5vh;
+    border-radius: 1vh;
+    font-weight: bold;
+}
+
+#submit {
+    display: flex;
+    align-self: flex-start;
+    font-weight: bold;
+    font-size: large;
+    font-family: 'Quicksand', sans-serif;
+    margin: 2vh;
+    padding: 1vh;
+    background-color: cornflowerblue;
+    border: 1px solid cornflowerblue;
+    border-radius: 1vh;
+}
+
+input, select {
+    height: 5vh;
+    width: auto;
+    font-size: auto;
+}
+
+#description {
+    width: 70%;
+    height: 10vh;
+}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import './NewProjectForm.css';
 
 function NewProjectForm() {
     // variables
@@ -52,7 +53,7 @@ function NewProjectForm() {
     // template
     return (
         <form>
-            <div>
+            <div className='form-container'>
                 <label htmlFor="title">Project Title: </label>
                 <input 
                 type="text" 
@@ -61,32 +62,32 @@ function NewProjectForm() {
                 onChange={handleChange}
                 />
             </div>
-            <div>
-                <label htmlFor="category">Select Category </label>
+            <div className='form-container'>
+                <label htmlFor="category">Select Category: </label>
                 <select 
                 type="select"
                 id="category"
                 placeholder="select category"
                 onChange={handleChange}>
-                    <option value="Cupcakes">Cupcakes</option>
-                    <option value="Cake">Cake</option>
-                    <option value="Pastry">Pastry</option>
-                    <option value="Pies">Pies</option>
-                    <option value="Cookies">Cookies</option>
-                    <option value="Other">Other</option>
+                    <option value="Cupcakes">Cupcakes 🧁</option>
+                    <option value="Cake">Cake 🍰</option>
+                    <option value="Pastry">Pastry 🥐</option>
+                    <option value="Pies">Pies 🥧</option>
+                    <option value="Cookies">Cookies 🍪</option>
+                    <option value="Other">Other 🍭</option>
 
                 </select>
             </div>
-            <div>
+            <div className='form-container' id='description'>
                 <label htmlFor="">Description: </label>
-                <input 
-                type="textarea" 
+                <textarea 
+                type="text" 
                 id="description" 
                 placeholder="Write a description about your project here." 
                 onChange={handleChange}
                 />
             </div>
-            <div>
+            <div className='form-container'>
                 <label htmlFor="goal">Goal: </label>
                 <input 
                 type="number" 
@@ -95,7 +96,7 @@ function NewProjectForm() {
                 onChange={handleChange}
                 />
             </div>
-            <div>
+            <div className='form-container'>
                 <label htmlFor="project_image">Project Image: </label>
                 <input 
                 type="url" 
@@ -106,7 +107,7 @@ function NewProjectForm() {
             </div>
         
             
-            <button type="submit" onClick={handleSubmit}>Publish</button>
+            <button id="submit" type="submit" onClick={handleSubmit}>Publish</button>
         </form>
     );
 }

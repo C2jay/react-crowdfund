@@ -44,22 +44,42 @@ h3 {
     font-weight: bold;
 }
 
-.filters {
+.filter-container {
     display: flex;
-    height: 2em;
-    width: max-content;
+    justify-content: center;
+    flex-direction: row;
+    border-bottom: 1px solid cornflowerblue;
+    padding: 3vh;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 3vh;
 }
 
-button {
+.filters {
+    display: flex;
+    height: 5vh;
+    width: max-content;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+
+button.filters {
     background-color: white;
     color: cornflowerblue;
-    font-size: 1em;
+    font-size: 3vh;
     border: none;
+    outline: none;
+    padding-right: 2vh;
+    padding-left: 2vh;
+}
+
+button.filters:hover {
+    color: coral;
 }
 
 #remove-filters{
-    border-bottom: 2px dotted coral;
     color: coral;
-    font-weight: bold; 
+    font-weight: bold;
 }
+
 

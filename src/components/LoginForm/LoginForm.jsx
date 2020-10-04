@@ -48,7 +48,7 @@ function LoginForm() {
     // template
     return (
         <form>
-            <div>
+            <div className='form-container'>
                 <label htmlFor="username">Username: </label>
                 <input 
                 type="text" 
@@ -57,7 +57,7 @@ function LoginForm() {
                 onChange={handleChange}
                 />
             </div>
-            <div>
+            <div className='form-container'>
                 <label htmlFor="password">Password: </label>
                 <input 
                 type="password" 
@@ -66,7 +66,7 @@ function LoginForm() {
                 onChange={handleChange}
                 />
             </div>
-            <button type="submit" onClick={handleSubmit}>Login</button>
+            <button id="submit" type="submit" onClick={handleSubmit}>Login</button>
         </form>
     );
 }
