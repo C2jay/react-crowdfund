@@ -26,14 +26,14 @@
     height: 25%;
 }
 
-.slogan p {
+#slogan-subtext {
     font-style: italic;
     margin: 1.5em;
     padding: 1.3em;
     text-align: center;
 }
 
-h3 {
+#slogan-text {
     font-family: 'Quicksand', sans-serif;
     font-size: 2.3em;
     text-align: center;

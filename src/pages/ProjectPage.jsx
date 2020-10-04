@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams, useHistory } from "react-router-dom";
 import ProgressBar from '../components/ProgressBar/ProgressBar';
 import PledgeForm from '../components/PledgeForm/PledgeForm';
+import './ProjectPage.css';
 
 function ProjectPage() {
     const [projectData, setProjectData] = useState({ pledges: [] });
     const { id } = useParams();
+    const date = new Date(projectData.date_created);
 
     useEffect(() => {
         fetch(`${process.env.REACT_APP_API_URL}projects/${id}`)
@@ -62,27 +64,35 @@ function ProjectPage() {
     projectData.pledges.map((pledge) => pledged += pledge.amount)
 
     return (
-        <div>
-            <h2>{projectData.title}</h2>
-            <h3>Created at: {projectData.date_created}</h3>
-            <h3>{`Status: ${projectData.is_open}`}</h3>
-            <h3>{`Total pledged: ${pledged}`}</h3>
-            <ProgressBar bgcolor="#6a1b9a" completed={Math.min((pledged/projectData.goal)*100, 100)} />
-            <h3>Pledges:</h3>
-            <ul>
-                {projectData.pledges.map((pledgeData, key) => {
-                    return (
-                        <div>
-                            <br></br>
-                            <li>
-                                {pledgeData.amount} from {pledgeData.supporter}
-                            </li>
-                            <p>{pledgeData.comment}</p>
-                            <p>{pledgeData.pledges}</p>
-                        </div>
-                    );
-                })}
-            </ul>
+        <div className='project-container'>
+            <div>
+                <h2 className="page-title">{projectData.title}</h2>
+                <h2>{projectData.owner}</h2>
+                <h3 className="sub-heading">{date.toLocaleDateString()}</h3>
+                <img src={projectData.project_image} />
+                <p>{`Total pledged: ${pledged} / ${projectData.goal}`}</p>
+                <ProgressBar bgcolor="#6a1b9a" completed={Math.min((pledged/projectData.goal)*100, 100)} />
+            </div>
+
+            <div>
+                <h3>Pledges:</h3>
+                <ul>
+                    {projectData.pledges.map((pledgeData, key) => {
+                        return (
+                            <div>
+                                <br></br>
+                                <li>
+                                    {pledgeData.amount} from {pledgeData.supporter}
+                                </li>
+                                <p>{pledgeData.comment}</p>
+                                <p>{pledgeData.pledges}</p>
+                            </div>
+                        );
+                    })}
+                </ul>
+            </div>
+
+            
             <Link to={{pathname: `/project/${id}/make-pledge`, state: {project_id: "fatfat"} }}>Make pledge</Link>
             {/* <button type='button' name='Edit Project' onClick={<NewProjectForm/>}>Edit</button> */}
         </div>

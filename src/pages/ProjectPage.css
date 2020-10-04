@@ -1,4 +1,7 @@
-.project-heading {
+.project-container {
     display: flex;
-    color: indigo;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 5vh;
 }
+

@@ -51,9 +51,9 @@ function HomePage() {
                 </div>
 
                 <div className='slogan'>
-                    <h3>Life is sweet with Sugar Momma!</h3>
+                    <h3 id='slogan-text'>Life is sweet with Sugar Momma!</h3>
                     <img src={Logo} alt="sugarmomma-logo" />
-                    <p>Post photos of your completed projects to <span id="emphasis">instagram</span> with the tag <span id="emphasis"> &#35;thnxsugarmomma </span> for a chance to get your image featured here!</p>
+                    <p id='slogan-subtext'>Post photos of your completed projects to <span id="emphasis">instagram</span> with the tag <span id="emphasis"> &#35;thnxsugarmomma </span> for a chance to get your image featured here!</p>
                 </div>
             </div>
             <div className="filter-container"> Apply Filters: 🧁 
