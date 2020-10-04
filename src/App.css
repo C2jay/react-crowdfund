@@ -7,7 +7,7 @@ html {
   display: grid;
   margin: 20px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 20px 20px;
 }
 
@@ -16,5 +16,5 @@ a {
 }
 
 a:hover{
-    color: #ff9999;
+      color: #ff9999;
 }

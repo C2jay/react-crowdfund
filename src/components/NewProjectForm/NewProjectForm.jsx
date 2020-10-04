@@ -79,7 +79,7 @@ function NewProjectForm() {
                 </select>
             </div>
             <div className='form-container' id='description'>
-                <label htmlFor="">Description: </label>
+                <label htmlFor="descripton">Description: </label>
                 <textarea 
                 type="text" 
                 id="description" 

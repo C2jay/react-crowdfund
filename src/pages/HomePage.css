@@ -4,12 +4,12 @@
 .header-bar {
     display: grid;
     grid-template-columns: 60% 40%;
-    margin: 5px;
+    margin: 1.5vh;
 }
 
 .sliderimg{
     width: 100%;
-    height: 400px;
+    height: 70vh;
     object-fit: cover;
     opacity: .7;
  }
@@ -28,8 +28,8 @@
 
 .slogan p {
     font-style: italic;
-    margin: 5px;
-    padding: 5px;
+    margin: 1.5em;
+    padding: 1.3em;
     text-align: center;
 }
 
@@ -40,7 +40,7 @@ h3 {
 }
 
 #emphasis {
-    color:#99ccff;
+    color:#4da6ff;
     font-weight: bold;
 }
 
@@ -48,7 +48,7 @@ h3 {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    border-bottom: 1px solid cornflowerblue;
+    border-bottom: 1px solid  #4da6ff;
     padding: 3vh;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
@@ -65,7 +65,7 @@ h3 {
 
 button.filters {
     background-color: white;
-    color: cornflowerblue;
+    color:  #4da6ff;
     font-size: 3vh;
     border: none;
     outline: none;
@@ -74,11 +74,11 @@ button.filters {
 }
 
 button.filters:hover {
-    color: coral;
+    color: #ff9999;
 }
 
 #remove-filters{
-    color: coral;
+    color: #ff9999;
     font-weight: bold;
 }
 

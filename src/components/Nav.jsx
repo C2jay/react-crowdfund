@@ -33,7 +33,7 @@ function Nav() {
                     <img src={Logo} alt="Sugarmomma"/>
                     </Link>
                 </div>
-                <div className='search-bar'>
+                <div id='username'>
                 {loggedIn? (
                     <Link to="/user-profile">{ username }</Link>
                 ):""}
@@ -42,15 +42,15 @@ function Nav() {
             <nav id='nav-text'>
                 
                 {loggedIn? (
-                <Link to="/new-project">Bake a new cake</Link>
+                <Link id='nav-button' to="/new-project">Bake a new cake</Link>
                 ) :(
-                <Link to="/register">Join the kitchen</Link>
+                <Link id='nav-button' to="/register">Join the kitchen</Link>
                 )}
 
                 {!loggedIn? (
-                    <Link to="/login">Login</Link>
+                    <Link id='nav-button' to="/login">Login</Link>
                 ) : (
-                <Link onClick={logOut}>Logout</Link>
+                    <Link id='nav-button' onClick={logOut}>Logout</Link>
                 )}
             </nav>
         </div>

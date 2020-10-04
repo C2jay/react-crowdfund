@@ -14,7 +14,7 @@ form{
 }
 
 label {
-    background-color: coral;
+    background-color: #ff9999;
     margin: 3vh;
     padding: 1.5vh;
     border-radius: 1vh;
@@ -29,8 +29,8 @@ label {
     font-family: 'Quicksand', sans-serif;
     margin: 2vh;
     padding: 1vh;
-    background-color: cornflowerblue;
-    border: 1px solid cornflowerblue;
+    background-color: #99ccff;
+    border: 1px solid #99ccff;
     border-radius: 1vh;
 }
 

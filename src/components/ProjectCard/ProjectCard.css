@@ -1,7 +1,7 @@
 .project-card {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   background-color: #e6f2ff;
   border: 2px solid #ff9999;
@@ -9,20 +9,39 @@
   }
 
 .project-card img {
-  align-self: center;
   display: flex;
+  margin-bottom: 1vh;
+  margin-top: 1vh;
   width: 100%;
-  height: 200px;
+  height: 40vh;
   object-fit: cover;
 }
 
+#project-title {
+  font-size: 1.3em;
+  margin: 1vh;
+}
+
+#project-category{
+  margin-top: 1vh;
+  background-color: #99ccff;
+  padding: 1vh;
+  border-radius: 1vh;
+  font-weight: bold;
+}
+
+#project-date {
+  padding-top: 1vh;
+}
 
 #card-text {
   display:flex;
   flex-direction: column;
+  align-items: center;
   margin: 0px;
   color: black;
-  margin-left: 5px;
+  font-family: 'Quicksand', sans-serif;
+
 }
 
 #card-text a {
@@ -31,9 +50,6 @@
 
 p {
   margin: 0px;
-  padding-bottom: 5px;
+  padding-bottom: 0px;
 }
 
-h4 {
-  margin: 3px;
-}

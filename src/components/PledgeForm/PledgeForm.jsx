@@ -49,8 +49,7 @@ const NewPledgeForm = () => {
     // template
     return (
         <form>
-            <p>{id}</p>
-            <div>
+            <div className='form-container'>
                 <label htmlFor="amount">Pledge Amount: </label>
                 <input 
                 type="number" 
@@ -59,16 +58,16 @@ const NewPledgeForm = () => {
                 onChange={handleChange}
                 />
             </div>
-            <div>
+            <div className='form-container'>
                 <label htmlFor="comment">Comment: </label>
-                <input 
+                <textarea 
                 type="textarea" 
-                id="comment" 
+                id="description" 
                 placeholder="Write a comment" 
                 onChange={handleChange}
                 />
             </div>
-            <button type="submit" onClick={handleSubmit}>Make Pledge</button>
+            <button id='submit' type="submit" onClick={handleSubmit}>Make Pledge</button>
         </form>
     );
 };
