@@ -45,7 +45,6 @@ function NewProjectForm() {
     const handleSubmit = (e) => {
         e.preventDefault();
         postData().then((response) => {
-                alert(JSON.stringify(response))
                 history.push("/");
         });
     };

@@ -7,6 +7,7 @@ import Nav from "./components/Nav";
 import Foot from "./components/Foot";
 import LoginPage from "./pages/LoginPage";
 import UserProfilePage from "./pages/UserProfilePage";
+import PledgePage from "./pages/PledgePage";
 import './App.css';
 import NewProjectPage from './pages/NewProject';
 
@@ -21,7 +22,7 @@ function App(){
                     <Route exact path="/">
                         <HomePage />
                     </Route>
-                    <Route path="/project/:id">
+                    <Route exact path="/project/:id">
                         <ProjectPage />
                     </Route>
                     <Route path="/login">
@@ -35,6 +36,9 @@ function App(){
                     </Route>
                     <Route path="/user-profile">
                         <UserProfilePage />
+                    </Route>
+                    <Route exact path="/project/:id/make-pledge">
+                        <PledgePage/>
                     </Route>
                 </Switch>
 

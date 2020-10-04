@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from "react-router-dom";
+import { Link, useParams, useHistory } from "react-router-dom";
 import ProgressBar from '../components/ProgressBar/ProgressBar';
+import PledgeForm from '../components/PledgeForm/PledgeForm';
 
 function ProjectPage() {
     const [projectData, setProjectData] = useState({ pledges: [] });
@@ -15,26 +16,48 @@ function ProjectPage() {
             setProjectData(data);
             });
     }, []);
+    const history = useHistory();
+
+
+    // const updateProject = (() => {
+    //     fetch(`${process.env.REACT_APP_API_URL}projects/${id}`, {
+    //         method: 'PUT',
+    //         headers: {
+    //             'Title': projectData.title,
+    //             'category': projectData.category,
+    //             'description': projectData.description,
+    //             'goal': projectData.goal,
+    //             'project_image': projectData.project_image,
+    //         }
+    //     })
+    //     .then((results) => {
+    //         return results.json();
+    //     })
+    //     .then((data) => {
+
+    //     })
+    // })
     
-    const updateProject = (() => {
-        const payload = {
-            title: "Poobumwee",
-            category: "CK",
-            description: "Big ol cakey boi",
-            goal: 80,
-            is_open: true
-        }
-        fetch(`${process.env.REACT_APP_API_URL}projects/${id}`, {
-            method: 'PUT',
-            headers: {
-                'Content-type': 'application/json; charset=UTF-8'
-            },
-            Authorization: "Token 5eb4760bfd8b980aac4fa5f6058cd659e1591e85",
-            body: payload
-        })
-        .then(data => alert(data.status))
-        .catch(err => alert(err))
-    })
+    // const updateProject = (() => {
+    //     const payload = {
+    //         "title": "Project biandfknasdklfsdkfsdjlkafjdls",
+    //         "category": "Cake",
+    //         "description": "The first project.",
+    //         "goal": 150,
+    //         "project_image": "https://via.placeholder.com/300.jpg",
+    //         "is_open": true,
+    //     }
+    //     fetch(`${process.env.REACT_APP_API_URL}projects/${id}`, {
+    //         method: 'PUT',
+    //         headers: {
+    //             'Content-type': 'application/json; charset=UTF-8',
+    //             Authorization: "Token 5eb4760bfd8b980aac4fa5f6058cd659e1591e85",
+    //         },
+    //         body: JSON.stringify(payload)
+    //     })
+    //     .then(data => alert(data.status))
+    //     .catch(err => alert(err))
+    // })
     let pledged = 0
     projectData.pledges.map((pledge) => pledged += pledge.amount)
 
@@ -60,9 +83,10 @@ function ProjectPage() {
                     );
                 })}
             </ul>
-            <button type='button' name='Edit Project' onClick={updateProject}>Edit</button>
+            <Link to={{pathname: `/project/${id}/make-pledge`, state: {project_id: "fatfat"} }}>Make pledge</Link>
+            {/* <button type='button' name='Edit Project' onClick={<NewProjectForm/>}>Edit</button> */}
         </div>
     );
 }
 
-export default ProjectPage
+export default ProjectPage;

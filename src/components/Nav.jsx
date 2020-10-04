@@ -34,19 +34,24 @@ function Nav() {
                     </Link>
                 </div>
                 <div className='search-bar'>
-                    <p>searchbar placeholder</p>
+                {loggedIn? (
+                    <Link to="/user-profile">{ username }</Link>
+                ):""}
                 </div>
             </div>
             <nav id='nav-text'>
+                
                 {loggedIn? (
-                    <Link to="/user-profile"> { username }</Link>
-                ):""}
+                <Link to="/new-project">Bake a new cake</Link>
+                ) :(
+                <Link to="/register">Join the kitchen</Link>
+                )}
+
                 {!loggedIn? (
                     <Link to="/login">Login</Link>
                 ) : (
                 <Link onClick={logOut}>Logout</Link>
                 )}
-                <Link to="/register">Join the kitchen</Link>
             </nav>
         </div>
     );
