@@ -31,7 +31,7 @@ function UpdateProjectForm() {
   
     const handleUpdate = (e) => {
         e.preventDefault();
-        const updateProject = () => fetch(`${process.env.REACT_APP_API_URL}projects/${id}`, {
+        fetch(`${process.env.REACT_APP_API_URL}projects/${id}`, {
             method: 'PUT',
             headers: {
                 "Content-Type": "application/json",
@@ -39,10 +39,17 @@ function UpdateProjectForm() {
                 },
             body: JSON.stringify(projectDetails),
             })
-        updateProject().then(() => {
+        .then((results) => {
+            return results;
+        })
+        .then((results) => {
+            if (results.ok) {
                 history.push("/");
-        });
-    };
+            } else {
+            alert(JSON.stringify(results.statusText))
+            }
+        })
+};
 
     // template
     return (
