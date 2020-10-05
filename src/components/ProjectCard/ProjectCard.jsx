@@ -15,7 +15,7 @@ function ProjectCard(props) {
                     <h4 id='project-title'>{projectData.title}</h4>
                     <p id='project-owner'> {projectData.owner}</p>
                 </div>
-                    <img src={projectData.project_image} />
+                    <img alt="project-proposal" src={projectData.project_image} />
                 <div id="card-text">
                     <p id='project-category'> {projectData.category}</p>
                     <p id='project-date'>{date.toLocaleDateString()}</p>

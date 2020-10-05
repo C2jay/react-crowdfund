@@ -77,7 +77,6 @@ function NewProjectForm() {
                     <option value="Pies">Pies 🥧</option>
                     <option value="Cookies">Cookies 🍪</option>
                     <option value="Other">Other 🍭</option>
-
                 </select>
             </div>
             <div className='form-container' id='description'>

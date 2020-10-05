@@ -4,13 +4,12 @@ import ProjectPage from './pages/ProjectPage';
 import HomePage from "./pages/HomePage";
 import Register from "./pages/Register";
 import Nav from "./components/Nav";
-import Foot from "./components/Foot";
 import LoginPage from "./pages/LoginPage";
 import UserProfilePage from "./pages/UserProfilePage";
 import PledgePage from "./pages/PledgePage";
+import UpdateProjectPage from './pages/UpdateProjectPage';
 import './App.css';
 import NewProjectPage from './pages/NewProject';
-import TestUpdateProjectForm from './components/UpdateProjectForm/TestUpdateProjectForm';
 
 
 function App(){
@@ -42,11 +41,10 @@ function App(){
                         <PledgePage/>
                     </Route>
                     <Route exact path="/project/:id/update">
-                        <TestUpdateProjectForm/>
+                        <UpdateProjectPage/>
                     </Route>
                 </Switch>
 
-                <Foot />
             </div>
         </Router>
     );

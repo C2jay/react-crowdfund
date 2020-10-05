@@ -56,7 +56,7 @@ function HomePage() {
                     <p id='slogan-subtext'>Post photos of your completed projects to <span id="emphasis">instagram</span> with the tag <span id="emphasis"> &#35;thnxsugarmomma </span> for a chance to get your image featured here!</p>
                 </div>
             </div>
-            <div className="filter-container"> Apply Filters: 🧁 
+            <div className="filter-container"> Apply Filters: <span role="img" aria-label="cupcake">🧁</span> 
                 <button className="filters" type='button' name="Cupcakes" onClick={changeFilter}>Cupcakes</button>
                 <button className="filters" type='button' name="Cake" onClick={changeFilter}>Cake</button>
                 <button className="filters" type='button' name="Pies" onClick={changeFilter}>Pies</button>
