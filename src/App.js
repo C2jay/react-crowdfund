@@ -10,6 +10,7 @@ import UserProfilePage from "./pages/UserProfilePage";
 import PledgePage from "./pages/PledgePage";
 import './App.css';
 import NewProjectPage from './pages/NewProject';
+import TestUpdateProjectForm from './components/UpdateProjectForm/TestUpdateProjectForm';
 
 
 function App(){
@@ -39,6 +40,9 @@ function App(){
                     </Route>
                     <Route exact path="/project/:id/make-pledge">
                         <PledgePage/>
+                    </Route>
+                    <Route exact path="/project/:id/update">
+                        <TestUpdateProjectForm/>
                     </Route>
                 </Switch>
 

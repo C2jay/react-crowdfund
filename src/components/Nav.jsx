@@ -42,15 +42,15 @@ function Nav() {
             <nav id='nav-text'>
                 
                 {loggedIn? (
-                <Link id='nav-button' to="/new-project">Bake a new cake</Link>
+                <Link id='nav-button' to="/new-project"><b>Bake a new cake</b></Link>
                 ) :(
-                <Link id='nav-button' to="/register">Join the kitchen</Link>
+                <Link id='nav-button' to="/register"><b>Join the kitchen</b></Link>
                 )}
 
                 {!loggedIn? (
-                    <Link id='nav-button' to="/login">Login</Link>
+                    <Link id='nav-button' to="/login"><b>Login</b></Link>
                 ) : (
-                    <Link id='nav-button' onClick={logOut}>Logout</Link>
+                    <Link id='nav-button' onClick={logOut}><b>Logout</b></Link>
                 )}
             </nav>
         </div>

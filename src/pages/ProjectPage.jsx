@@ -3,11 +3,15 @@ import { Link, useParams, useHistory } from "react-router-dom";
 import ProgressBar from '../components/ProgressBar/ProgressBar';
 import PledgeForm from '../components/PledgeForm/PledgeForm';
 import './ProjectPage.css';
+import UpdateProjectForm from '../components/UpdateProjectForm/UpdateProjectForm';
 
 function ProjectPage() {
     const [projectData, setProjectData] = useState({ pledges: [] });
     const { id } = useParams();
     const date = new Date(projectData.date_created);
+    let token = window.localStorage.getItem("token");
+    let username = window.localStorage.getItem("username");
+
 
     useEffect(() => {
         fetch(`${process.env.REACT_APP_API_URL}projects/${id}`)
@@ -20,25 +24,6 @@ function ProjectPage() {
     }, []);
     const history = useHistory();
 
-
-    // const updateProject = (() => {
-    //     fetch(`${process.env.REACT_APP_API_URL}projects/${id}`, {
-    //         method: 'PUT',
-    //         headers: {
-    //             'Title': projectData.title,
-    //             'category': projectData.category,
-    //             'description': projectData.description,
-    //             'goal': projectData.goal,
-    //             'project_image': projectData.project_image,
-    //         }
-    //     })
-    //     .then((results) => {
-    //         return results.json();
-    //     })
-    //     .then((data) => {
-
-    //     })
-    // })
     
     // const updateProject = (() => {
     //     const payload = {
@@ -60,6 +45,27 @@ function ProjectPage() {
     //     .then(data => alert(data.status))
     //     .catch(err => alert(err))
     // })
+
+    const deleteProject=(() => {
+        if (projectData.owner === username){
+            return fetch(`${process.env.REACT_APP_API_URL}projects/${id}`, {
+                method: 'DELETE',
+                headers:    {
+                    'Content-type': 'application/json; charset=UTF-8',
+                    Authorization: `Token ${token}`,
+                },
+            })
+        } else {
+            alert('You are not the owner of this project')
+        }
+    });
+
+    const handleDelete = (e) => {
+        e.preventDefault();
+        deleteProject().then(() => {
+                history.push("/");
+        })};
+
     let pledged = 0
     projectData.pledges.map((pledge) => pledged += pledge.amount)
 
@@ -93,7 +99,9 @@ function ProjectPage() {
             </div>
 
             
-            <Link to={{pathname: `/project/${id}/make-pledge`, state: {project_id: "fatfat"} }}>Make pledge</Link>
+            <Link to={`/project/${id}/make-pledge`}>Make pledge</Link>
+            <button onClick={handleDelete}>Delete Project</button>
+            <Link to={`/project/${id}/update`}>Update Project</Link>
             {/* <button type='button' name='Edit Project' onClick={<NewProjectForm/>}>Edit</button> */}
         </div>
     );
