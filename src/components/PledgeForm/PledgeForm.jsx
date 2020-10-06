@@ -53,7 +53,10 @@ const NewPledgeForm = () => {
                 <label htmlFor="amount">Pledge Amount: </label>
                 <input 
                 type="number" 
-                id="amount" 
+                id="amount"
+                min="5" 
+                max="500"
+                step="5"
                 placeholder="Enter pledge amount" 
                 onChange={handleChange}
                 />

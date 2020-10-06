@@ -94,6 +94,8 @@ function UpdateProjectForm() {
                 <input 
                 type="number" 
                 id="goal" 
+                min="10" 
+                max="1000"
                 value={projectDetails.goal} 
                 onChange={handleChange} 
                 />
