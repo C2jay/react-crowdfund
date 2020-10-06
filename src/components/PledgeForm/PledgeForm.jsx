@@ -65,7 +65,7 @@ const NewPledgeForm = () => {
                 <label htmlFor="comment">Comment: </label>
                 <textarea 
                 type="textarea" 
-                id="description" 
+                id="comment"
                 placeholder="Write a comment" 
                 onChange={handleChange}
                 />

@@ -56,39 +56,48 @@ function ProjectPage() {
     projectData.pledges.map((pledge) => pledged += pledge.amount)
 
     return (
-        <div className='project-container'>
-            <div>
-                <h2 className="page-title">{projectData.title}</h2>
-                <h2>{projectData.owner}</h2>
-                <h3 className="sub-heading">{date.toLocaleDateString()}</h3>
-                <img alt="project-proposal" src={projectData.project_image} />
-                <p>{projectData.description}</p>
-                <p>{`Total pledged: ${pledged} / ${projectData.goal}`}</p>
-                <ProgressBar bgcolor="#6a1b9a" completed={Math.min((pledged/projectData.goal)*100, 100)} />
+        <div>
+            <div className='project-container'>
+
+                <div id="left-side">
+                    <h1 className="page-title">{projectData.title}</h1>
+                    <h2>{projectData.owner}</h2>
+                    <h3 className="sub-heading">{date.toLocaleDateString()}</h3>
+                    <p>{projectData.description}</p>
+                </div>
+
+                <div id="right-side">
+                    <img id="project-image" alt="project-proposal" src={projectData.project_image} />
+                    <br></br>
+                    <p><b>{`Total pledged: $${pledged} / $${projectData.goal}`}</b></p>
+                    <ProgressBar bgcolor="#6a1b9a" completed={Math.min((pledged/projectData.goal)*100, 100)} />
+                </div>
             </div>
 
-            <div>
-                <h3>Pledges:</h3>
+            <div id="pledge-container">
+                <h2>Pledges:</h2>
                 <ul>
                     {projectData.pledges.map((pledgeData, key) => {
                         return (
                             <div>
                                 <br></br>
                                 <li>
-                                    {pledgeData.amount} from {pledgeData.supporter}
+                                    <b>${pledgeData.amount}</b> donated from <b>{pledgeData.supporter}</b>
                                 </li>
-                                <p>{pledgeData.comment}</p>
-                                <p>{pledgeData.pledges}</p>
+                                <div id="comment-box">
+                                    <p>{pledgeData.comment}</p>
+                                </div>
                             </div>
                         );
                     })}
                 </ul>
             </div>
-            
-            <Link id="submit" to={`/project/${id}/make-pledge`}>Make pledge</Link>
-            <Link id="submit" to={`/project/${id}/update`}>Edit Project</Link>
-            <button id="submit" onClick={handleDelete}>Delete Project</button>
 
+            <div id="buttons">
+                <Link id="submit" to={`/project/${id}/make-pledge`}>Make pledge</Link>
+                <Link id="submit" to={`/project/${id}/update`}>Edit Project</Link>
+                <button id="submit" onClick={handleDelete}>Delete Project</button>
+            </div>
         </div>
     );
 }

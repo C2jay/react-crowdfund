@@ -1,10 +1,49 @@
 .project-container {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-direction: row;
     margin: 5vh;
 }
 
+#left-side {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%
+}
+
+#project-image{
+    height: 15em;
+    width: auto;}
+
 a {
     color: black;
+}
+
+#pledge-container {
+    margin: 5vh;
+    border-top: 5px solid #ff9999;
+    ;
+}
+
+#comment-box {
+    padding-top: .5vh;
+
+}
+
+
+li{
+    list-style-type: circle; 
+}
+
+#buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3em;;
 }
