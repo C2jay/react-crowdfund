@@ -35,7 +35,7 @@ function Nav() {
                 </div>
                 <div id='username'>
                 {loggedIn? (
-                    <Link to="/user-profile">{ username }</Link>
+                    <p>{ username }</p>
                 ):""}
                 </div>
             </div>

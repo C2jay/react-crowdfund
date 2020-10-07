@@ -5,7 +5,6 @@ import HomePage from "./pages/HomePage";
 import Register from "./pages/Register";
 import Nav from "./components/Nav";
 import LoginPage from "./pages/LoginPage";
-import UserProfilePage from "./pages/UserProfilePage";
 import PledgePage from "./pages/PledgePage";
 import UpdateProjectPage from './pages/UpdateProjectPage';
 import './App.css';
@@ -34,9 +33,6 @@ function App(){
                     <Route path="/new-project">
                         <NewProjectPage />
                     </Route>
-                    <Route path="/user-profile">
-                        <UserProfilePage />
-                    </Route>
                     <Route exact path="/project/:id/make-pledge">
                         <PledgePage/>
                     </Route>
@@ -44,7 +40,7 @@ function App(){
                         <UpdateProjectPage/>
                     </Route>
                 </Switch>
-
+                
             </div>
         </Router>
     );

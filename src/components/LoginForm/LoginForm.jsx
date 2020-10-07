@@ -42,6 +42,9 @@ function LoginForm() {
 
                 history.push("/");
             });
+
+        } else {
+            alert("Please check your username and password and try again!")
         }
     };
 
