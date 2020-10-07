@@ -23,15 +23,6 @@ function ProjectPage() {
     }, []);
     const history = useHistory();
     
-    const Owner=(() => {
-        let owner = false
-        if((token != null) && (username === projectData.owner)) {
-            owner = true
-        }
-        return owner
-    });
-
-
     const deleteProject=(() => {
         if (projectData.owner === username){
             return fetch(`${process.env.REACT_APP_API_URL}projects/${id}`, {
