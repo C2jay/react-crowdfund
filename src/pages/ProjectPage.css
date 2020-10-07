@@ -20,7 +20,9 @@
 
 #project-image{
     height: 15em;
-    width: auto;}
+    width: auto;
+    border: .2em dashed #4da6ff;
+}
 
 a {
     color: black;

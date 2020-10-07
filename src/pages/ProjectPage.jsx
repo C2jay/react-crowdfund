@@ -29,7 +29,7 @@ function ProjectPage() {
             owner = true
         }
         return owner
-    })
+    });
 
 
     const deleteProject=(() => {
@@ -95,8 +95,14 @@ function ProjectPage() {
 
             <div id="buttons">
                 <Link id="submit" to={`/project/${id}/make-pledge`}>Make pledge</Link>
-                <Link id="submit" to={`/project/${id}/update`}>Edit Project</Link>
-                <button id="submit" onClick={handleDelete}>Delete Project</button>
+                {((username === projectData.owner) && (pledged === 0)) ? (
+                    <Link id="submit" to={`/project/${id}/update`}>Edit Project</Link>)
+                    : ("")
+                }
+                {(username === projectData.owner) ? (
+                    <button id="submit" onClick={handleDelete}>Delete Project</button>)
+                    : ("")
+                }
             </div>
         </div>
     );
