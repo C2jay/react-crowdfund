@@ -40,8 +40,7 @@ const NewPledgeForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        postData().then((response) => {
-                alert(JSON.stringify(response))
+        postData().then(() => {
                 history.push(`/project/${id}`);
         });
     };

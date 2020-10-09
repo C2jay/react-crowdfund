@@ -37,7 +37,6 @@ function RegisterForm() {
     const handleSubmit = (e) => {
         e.preventDefault();
         postData().then((response) => {
-            alert('boo')
             window.localStorage.setItem('username', credentials.username)
             window.localStorage.setItem("token", response.token);
             history.push("/");

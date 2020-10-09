@@ -44,11 +44,13 @@ function NewProjectForm() {
     };
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        postData().then((response) => {
-            alert(JSON.stringify(response))
-            history.push("/");
-        });
+        try { e.preventDefault();
+            postData().then(() => {
+                history.push("/"); 
+            });
+        } catch(e) {
+            alert(JSON.stringify(e))
+        };
     };
 
 
